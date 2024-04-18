@@ -1,7 +1,6 @@
 module gui
 
-using CSV, DataFrames, Dates, Distributions, Genie, Logging, GenieFramework, GraphPlot, Graphs, JLD2, LatinHypercubeSampling, LightGraphs,  Parameters, PlotlyBase, Random,  SparseArrays, StatsBase
-
+using Pkg, CSV, DataFrames, Dates, Distributions, Genie, GenieFramework, GraphPlot, Graphs, JLD2, LatinHypercubeSampling, LightGraphs, Logging, Parameters, PlotlyBase, Random, SparseArrays, StatsBase
 include("../app.jl")
 include("../ui.jl")
 
@@ -16,6 +15,7 @@ Base.@ccallable function julia_main()::Cint
 end
 
 function real_main()
+   
     Genie.loadapp(); Genie.up(async=false)
 end
 

@@ -2,7 +2,8 @@
 
 # Script to install dependencies and run a Genie app in production mode
 
-num_cores=$(nproc)
+# Get number of cores on macOS
+num_cores=$(sysctl -n hw.ncpu)
 
 echo "Installing Julia dependencies..."
 
@@ -32,7 +33,7 @@ if [ $found -eq 0 ]; then
     exit 1
 else
     echo "SARMS is now running."
-    xdg-open http://127.0.0.1:8000 &
+    open http://127.0.0.1:8000
 fi
 
 echo " ________________________ "

@@ -1,135 +1,4 @@
-  Activating project at `~/Documents/PhD/Thesis Code/model_gui/gui`
-
-
- ██████╗ ███████�
-[28209] signal (15): Terminated
-in expression starting at /home/alexcrosbie/Documents/PhD/Thesis Code/model_gui/gui/run_sarms.jl:7
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-task_done_hook at ./task.jl:675
-jfptr_task_done_hook_75297.1 at /home/alexcrosbie/.julia/juliaup/julia-1.10.2+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-jl_finish_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:320
-jl_threadfun at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:191
-start_thread at /lib64/libc.so.6 (unknown line)
-__GI___clone3 at /lib64/libc.so.6 (unknown line)
-unknown function (ip: (nil))
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-task_done_hook at ./task.jl:675
-jfptr_task_done_hook_75297.1 at /home/alexcrosbie/.julia/juliaup/julia-1.10.2+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-jl_finish_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:320
-jl_threadfun at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:191
-start_thread at /lib64/libc.so.6 (unknown line)
-__GI___clone3 at /lib64/libc.so.6 (unknown line)
-unknown function (ip: (nil))
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-task_done_hook at ./task.jl:675
-jfptr_task_done_hook_75297.1 at /home/alexcrosbie/.julia/juliaup/julia-1.10.2+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-jl_finish_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:320
-start_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:1249
-unknown function (ip: (nil))
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-task_done_hook at ./task.jl:675
-jfptr_task_done_hook_75297.1 at /home/alexcrosbie/.julia/juliaup/julia-1.10.2+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-jl_finish_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:320
-jl_threadfun at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:191
-start_thread at /lib64/libc.so.6 (unknown line)
-__GI___clone3 at /lib64/libc.so.6 (unknown line)
-unknown function (ip: (nil))
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-#wait#645 at ./condition.jl:130
-wait at ./condition.jl:125 [inlined]
-#138 at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/usr/share/julia/stdlib/v1.10/Distributed/src/remotecall.jl:281 [inlined]
-lock at ./lock.jl:229
-lock at ./condition.jl:78 [inlined]
-#137 at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/usr/share/julia/stdlib/v1.10/Distributed/src/remotecall.jl:279
-unknown function (ip: 0x7f995a29e232)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-start_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:1238
-unknown function (ip: (nil))
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-task_done_hook at ./task.jl:675
-jfptr_task_done_hook_75297.1 at /home/alexcrosbie/.julia/juliaup/julia-1.10.2+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-jl_finish_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:320
-start_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:1249
-unknown function (ip: (nil))
-__futex_abstimed_wait_common at /lib64/libc.so.6 (unknown line)
-pthread_cond_wait at /lib64/libc.so.6 (unknown line)
-uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:883
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:509
-poptask at ./task.jl:985
-wait at ./task.jl:994
-task_done_hook at ./task.jl:675
-jfptr_task_done_hook_75297.1 at /home/alexcrosbie/.julia/juliaup/julia-1.10.2+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-jl_finish_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:320
-start_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:1249
-unknown function (ip: (nil))
-epoll_wait at /lib64/libc.so.6 (unknown line)
-uv__io_poll at /workspace/srcdir/libuv/src/unix/epoll.c:236
-uv_run at /workspace/srcdir/libuv/src/unix/core.c:400
-ijl_task_get_next at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/partr.c:470
-poptask at ./task.jl:985
-wait at ./task.jl:994
-#wait#645 at ./condition.jl:130
-wait at ./condition.jl:125 [inlined]
-_trywait at ./asyncevent.jl:142
-#726 at ./asyncevent.jl:304
-unknown function (ip: 0x7f991c14e822)
-_jl_invoke at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:2894 [inlined]
-ijl_apply_generic at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/gf.c:3076
-jl_apply at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
-start_task at /cache/build/builder-amdci5-1/julialang/julia-release-1-dot-10/src/task.c:1238
-unknown function (ip: (nil))
-Allocations: 1083055432 (Pool: 1077447007; Big: 5608425); GC: 1321
-  Activating project at `~/Documents/PhD/Thesis Code/model_gui/gui`
+  Activating project at `~/gui`
 
 
  ██████╗ ███████╗███╗   ██╗██╗███████╗    ███████╗
@@ -147,37 +16,9 @@ Allocations: 1083055432 (Pool: 1077447007; Big: 5608425); GC: 1321
 
 Active env: DEV
 
-[0K[0K[0K[0KLoading initializers[0K[0K[0K[0KLoading initializers ✅[0K[0K[0K[0KLoading helpers[0K[0K[0K[0KLoading helpers ✅[0K[0K[0K[0KLoading libs[0K[0K[0K[0KLoading libs ✅[0K[0K[0K[0KLoading resources[0K[0K[0K[0KLoading resources ✅[0K[0K[0K[0KLoading plugins[0K[0K[0K[0KLoading plugins ✅[0K[0K[0K[0KLoading routes[0K[0K[0K[0KLoading routes ✅[0K[0K[0K[0KLoading app[ Info: 2024-04-18 09:08:15 Watching ["/home/alexcrosbie/Documents/PhD/Thesis Code/model_gui/gui"]
+[0K[0K[0K[0KLoading initializers[0K[0K[0K[0KLoading initializers ✅[0K[0K[0K[0KLoading helpers[0K[0K[0K[0KLoading helpers ✅[0K[0K[0K[0KLoading libs[0K[0K[0K[0KLoading libs ✅[0K[0K[0K[0KLoading resources[0K[0K[0K[0KLoading resources ✅[0K[0K[0K[0KLoading plugins[0K[0K[0K[0KLoading plugins ✅[0K[0K[0K[0KLoading routes[0K[0K[0K[0KLoading routes ✅[0K[0K[0K[0KLoading app[ Info: 2024-04-19 11:15:51 Watching ["/home/acrosbie/gui"]
 [0K[0K[0K[0KLoading app ✅[0K[0K
 Ready! 
 
-┌ Info: 2024-04-18 09:08:33 
+┌ Info: 2024-04-19 11:16:13 
 └ Web Server starting at http://127.0.0.1:8000 - press Ctrl/Cmd+C to stop the server. 
-[ Info: 2024-04-18 09:08:33 Listening on: 127.0.0.1:8000, thread id: 3
-[ Info: 2024-04-18 09:11:49 System is Spring
-[ Info: 2024-04-18 09:11:49 Herd size is 273
-[ Info: 2024-04-18 09:11:49 Vacc rate is 0.5
-[ Info: 2024-04-18 09:11:49 FPT rate is 0.6
-[ Info: 2024-04-18 09:11:49 1
-[ Info: 2024-04-18 09:11:49 2555
- 62.370245 seconds (438.94 M allocations: 94.280 GiB, 5.10% gc time, 2.57% compilation time)
-[ Info: 2024-04-18 09:12:59 Model ran!
-Simulation has completed.
-[ Info: 2024-04-18 09:13:00 Loaded the new simdata
-[ Info: 2024-04-18 09:13:01 true
-[ Info: 2024-04-18 09:37:29 Autoreloading
-[ Info: 2024-04-18 09:37:32 Autoreloading
-[ Info: 2024-04-18 10:16:32 System is Spring
-[ Info: 2024-04-18 10:16:32 Herd size is 273
-[ Info: 2024-04-18 10:16:32 Vacc rate is 0.5
-[ Info: 2024-04-18 10:16:32 FPT rate is 0.6
-[ Info: 2024-04-18 10:16:32 1
-[ Info: 2024-04-18 10:16:32 2555
- 67.143875 seconds (511.77 M allocations: 94.221 GiB, 5.01% gc time)
-[ Info: 2024-04-18 10:17:39 Model ran!
-Simulation has completed.
-[ Info: 2024-04-18 10:17:39 Loaded the new simdata
-[ Info: 2024-04-18 10:17:39 true
-┌ Warning: 2024-04-18 10:45:14 Failed to clean up temporary path "/tmp/jl_genie_build_J8RZG0"
-│ ErrorException("schedule: Task not runnable")
-└ @ Base.Filesystem file.jl:549
