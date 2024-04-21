@@ -30,6 +30,8 @@ include("make_farm_network.jl")
     @in gen_spread_networks::Bool = false
     @in generated_networks::Bool = false
 
+
+
     #Prefill values
     #Single herd simulation
     @in system = "Spring"
@@ -996,9 +998,10 @@ include("make_farm_network.jl")
                             
                 ))
         
+                layout = PlotlyBase.layout(title="Dynamic network (post simulation)")
 
 
-        plot =  [edge_trace, node_trace]
+        plot =  [edge_trace, node_trace, layout]
                     
             return plot
 
@@ -1100,9 +1103,9 @@ include("make_farm_network.jl")
                             
                 ))
         
+        layout = PlotlyBase.layout(title="Static network (pre simulation)")
 
-
-        plot =  [edge_trace, node_trace]
+        plot =  [edge_trace, node_trace, layout]
                     
             return plot
     end

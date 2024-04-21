@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                                     ])
                                                     ]),
                                                 
-                                                btn("Run simulation", color="primary", style="font-weight: 600; text-transform: none; width: 100%;", @click(:run_model)),
+                                                    btn("Run simulation", color="primary", style="font-weight: 600; text-transform: none; width: 100%;", @click("run_model = true; alert('Simulation has started');")),
                                                 row([
                                                     cell([
                                                         Stipple.select(:system; options=:systems, label = "Choose calving system")
@@ -266,14 +266,15 @@ document.addEventListener("DOMContentLoaded", function() {
                                         [
                                             h6("Parameterise a simulation ensemble"),
                                             row([
-                                            btn("Draw parameters", color="teal", style="font-weight: 600; text-transform: none; width: 100%;", @click(:lhs_draw)),
+                                            btn("Draw parameters", color="teal", style="font-weight: 600; text-transform: none; width: 100%;", @click("lhs_draw = true; alert('Parameters drawn and saved');")),
+
                                             ]),
                                             row([
                                                 cell([], class="q-pa-xs q-ma-xs q-mb-md")
                                             ]),
                                             row([
 
-                                            cell([btn("Run ensemble", color="red", style="font-weight: 600; text-transform: none; width: 100%;", @click(:run_ensemble))]),
+                                            cell([btn("Run ensemble", color="red", style="font-weight: 600; text-transform: none; width: 100%;", @click("run_ensemble = true; alert('The ensemble simulation is starting...');"))]),
                                             cell([
                                                 Html.div(class = "", style="transform: scale(0.5);transform-origin: top left;",
                                                 [bignumber(number=:ensemblestatus, title = "", style="font-weight: 600; text-transform: none; width: 100%;")]
@@ -404,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                             row([h6("First specify a static trading network structure, next generate parameters for individual farms and then run the model.", style="transform: scale(0.85);transform-origin: top left;")]),
                                             
                                             row([
-                                            cell([btn("Run between-herd model", color="red", style="font-weight: 600; text-transform: none; width: 100%;", @click(:run_between_herd))]),
+                                            cell([btn("Run between-herd model", color="red", style="font-weight: 600; text-transform: none; width: 100%;", @click("run_between_herd = true; alert('Running between herd model. This will take 15 to 30 min ...');"))]),
                                             cell([
                                                 Html.div(class = "", style="transform: scale(0.5);transform-origin: top left;", 
                                                 bignumber(number=:betweenstatus, title = "", style="font-weight: 600; text-transform: none; width: 100%;"))]),
@@ -412,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                            
                                             ]),
                                             row([h6("Farm network", style="transform: scale(0.85);transform-origin: top left;")]),
-                                            btn("Generate farm network", color="orange", style="font-weight: 600; text-transform: none; width: 100%;", @click(:gen_farm_network)),
+                                            btn("Generate farm network", color="orange", style="font-weight: 600; text-transform: none; width: 100%;", @click("gen_farm_network = true; alert('Generated trading network structure');")),
                                             row([
                                                
                                                # cell([numberfield(class = "q-ma-xs", "Number of simulations", :numsims, hint = "", min =  1, max = 15, step = 1)]),
@@ -431,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                                 cell([numberfield(class = "q-ma-xs", "Probability batch calving", :prob_batch_f, hint = "Probablity drawn herd is batch", min = 0, max = 1, step = 0.01)])
                                             ]),
                                             row([h6("Farm parameters", style="transform: scale(0.85);transform-origin: top left;")]),
-                                            btn("Generate farm parameters", color="primary", style="font-weight: 600; text-transform: none; width: 100%;", @click(:gen_farm_parms)),
+                                            btn("Generate farm parameters", color="primary", style="font-weight: 600; text-transform: none; width: 100%;", @click("gen_farm_parms = true; alert('Farm parameters saved');")),
 
                                                         row([
                                                             cell([numberfield(class = "q-ma-xs", "Minimum farm size", :smallest_farm, hint = "", min =  80, max = 100, step = 1)]),
@@ -520,12 +521,12 @@ document.addEventListener("DOMContentLoaded", function() {
                                         style="margin-left: 200px;",
 
                                         [ 
-                                         h6("Between herd spread networks"),
+                                         h6("Between herd spread networks", style="position: relative;"),
                                          btn("Generate networks", color="teal", style="font-weight: 600; text-transform: none; width: 100%;", @click(:gen_spread_networks)),
                                          h6("Click to generate networks. These will take some time to generate, depending on how many simulations were run.", style="transform: scale(0.75);transform-origin: top left;"),
-                                         h6("Static network", @iif("generated_networks == true")),
+                                         h6("Static network", @iif("generated_networks == true"),style="position: relative;"),
                                          plot(:pre_sna, layout = :post_sna_layout, @iif("generated_networks == true")),
-                                         h6("Post-simulation network", @iif("generated_networks == true")),
+                                         h6("Post-simulation network", @iif("generated_networks == true"), style="position: relative;"),
                                          plot(:post_sna, layout = :post_sna_layout, @iif("generated_networks == true"))
                                         ])
  
