@@ -9,10 +9,15 @@ libsPath="./installed_libs.so"
 if [ ! -f "$libsPath" ]; then
     # Ask the user if they want to run the installer
     read -p "Do you want to install SARMS? This is not essential but will reduce subsequent load times (allow ~10 minutes). (Y/n) " response
-    if [ "$response" = "Y" ]; then
+    if [[ "$response" =~ ^[Yy]$ ]]; then
         echo "Installing SARMS dependencies..."
         julia -i --threads=$num_cores ./install_sarms.jl
-        echo "Installation complete."
+        if [ $? -eq 0 ]; then
+            echo "Installation complete."
+        else
+            echo "Installation failed."
+            exit 1
+        fi
     fi
 fi
 
@@ -57,19 +62,28 @@ if $ready; then
         echo "File not found: $filePath"
     fi
 
-    wait $browser_pid
-    echo "Browser has been closed."
+    echo "Press any key to close the browser and terminate the Julia process..."
+    read -n 1 -s
+
+    if kill -0 $browser_pid 2>/dev/null; then
+        echo "Terminating browser process..."
+        kill -SIGTERM $browser_pid
+        wait $browser_pid 2>/dev/null
+        echo "Browser process terminated."
+    fi
+
     if kill -0 $julia_pid 2>/dev/null; then
         echo "Terminating Julia process with PID $julia_pid..."
         kill -SIGTERM $julia_pid
-        echo "Process terminated."
+        wait $julia_pid 2>/dev/null
+        echo "Julia process terminated."
     fi
 else
     echo "Failed to detect 'Ready!' in the output. Check logs."
     if kill -0 $julia_pid 2>/dev/null; then
         echo "Terminating Julia process with PID $julia_pid..."
         kill -SIGTERM $julia_pid
-        echo "Process terminated."
+        echo "Julia process terminated."
     fi
     exit 1
 fi
@@ -83,5 +97,5 @@ echo "            (__)       )\/\\"
 echo "                ||----w |"
 echo "                ||     ||"
 
-echo "Press any key to exit ..."
+echo "Press any key to exit..."
 read -n 1 -s
