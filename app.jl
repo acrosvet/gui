@@ -163,9 +163,9 @@ include("make_farm_network.jl")
     @in treat_calf = 0.1
 
     # Timer functions
-    @out runstatus::String = "Click to 'Run simulation' to run"
-    @out ensemblestatus::String = "Click 'Run ensemble' to run"
-    @out betweenstatus::String = "Click 'Run between-herd model' to run"
+    @out runstatus::String = "Click to 'Run simulation' (once) to run."
+    @out ensemblestatus::String = "Click 'Run ensemble' (once) to run."
+    @out betweenstatus::String = "Click 'Run between-herd model' (once) to run."
 
 
     #Tables 

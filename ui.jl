@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
                                                     ]),
                                                 
                                                 btn("Run simulation", color="primary", style="font-weight: 600; text-transform: none; width: 100%;", @click(:run_model)),
-                                                
                                                 row([
                                                     cell([
                                                         Stipple.select(:system; options=:systems, label = "Choose calving system")

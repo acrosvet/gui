@@ -1,0 +1,10 @@
+# Instructions for installing and running SARMS.
+
+1. Install Julia on your system following the instructions on the Julia website (https://julialang.org/) for your operating system. 
+2. If you are using Linux, install following the instructions on the website, *not* from your distro's package manager.
+3. Once Julia is installed, double click the shortcut to SARMS for your operating system. You will need to change the shortcut path if you relocate this file.
+4. You will be prompted to 'install' SARMS. This will precompile the required Julia packages and decrease subsequent load times, which is helpful but not required.
+5. The application will launch in a browser window.
+6. The model is resource intensive and will take time to execute.
+7. Running an instance of the between-herd simulation ideally requires > 20gb of RAM, but results can be generated for a cached set of results bundled with the application.
+8. The intent of the web application is to explore the functionality of the model. Large scale simulation ensembles should be run directly in Julia, ideally using an HPC.
