@@ -244,6 +244,15 @@ include("make_farm_network.jl")
         yaxis_range = [0,100]
     )
 
+    @out demo_layout = PlotlyBase.Layout(
+        title = "Population demographics",
+        xaxis_title = "Simulation day",
+        yaxis_title = "Number of cattle",
+        height = 350,
+        plot_bgcolor = "white",
+        paper_bgcolor = "white"
+    )
+
    
     function ensemble_plot(type)
         PlotlyBase.Layout(

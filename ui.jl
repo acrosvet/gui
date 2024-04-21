@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                          #itemsection(avatar=true, icon("tune")),
                                          itemsection("<b>SET PARAMETERS</b>  Single simulation<i>Within-herd model</i>")
                                         ]),
-                                   item(clickable="", vripple="", @click("selected_component = 'restab'"), @iif("single_sim_completed == true"),
+                                   item(clickable="", vripple="", @click("selected_component = 'restab'"), 
+                                   #@iif("single_sim_completed == true"),
                                         [
                                          #itemsection(avatar=true, icon("show_chart")),
                                          itemsection("<b>VIEW RESULTS</b> Single simulation")
@@ -211,14 +212,14 @@ document.addEventListener("DOMContentLoaded", function() {
                                                [ 
                                                 h6("Simulation results"),
                                                 h6("Run an example simulation to show results", @iif("single_sim_completed == false"), style="transform: scale(0.75);transform-origin: top left;"),
-                                                row([ h6("Maximum prevalence", style="text-align: center;", @iif("single_sim_completed == true"))]),
+                                                row([ h6("Maximum prevalence", style="text-align: center; position: relative;", @iif("single_sim_completed == true"))]),
                                                 row([
-                                                    cell([bignumber(number=:max_prev_si, title = "All SI", @iif("single_sim_completed == true"),style="z-index: 1")]),
-                                                    cell([bignumber(number=:max_prev_amrsi, title = "All AMRSI", @iif("single_sim_completed == true"))]),     
-                                                    cell([bignumber(number=:max_prev_active_si, title = "Active SI", @iif("single_sim_completed == true"))]),
-                                                    cell([bignumber(number=:max_prev_active_amrsi, title = "Active AMRSI", @iif("single_sim_completed == true"))]),
-                                                    cell([bignumber(number=:max_prev_car_si, title = "Carrier SI", @iif("single_sim_completed == true"))]),
-                                                    cell([bignumber(number=:max_prev_car_amrsi, title = "Carrier AMRSI", @iif("single_sim_completed == true"))])
+                                                    cell([bignumber(number=:max_prev_si, title = "All SI", @iif("single_sim_completed == true"),style="position: relative;")]),
+                                                    cell([bignumber(number=:max_prev_amrsi, title = "All AMRSI", @iif("single_sim_completed == true"),style="position: relative;")]),     
+                                                    cell([bignumber(number=:max_prev_active_si, title = "Active SI", @iif("single_sim_completed == true"),style="position: relative;")]),
+                                                    cell([bignumber(number=:max_prev_active_amrsi, title = "Active AMRSI", @iif("single_sim_completed == true"),style="position: relative;")]),
+                                                    cell([bignumber(number=:max_prev_car_si, title = "Carrier SI", @iif("single_sim_completed == true"),style="position: relative;")]),
+                                                    cell([bignumber(number=:max_prev_car_amrsi, title = "Carrier AMRSI", @iif("single_sim_completed == true"),style="position: relative;")])
                                                 ]),
                                                 plot(:sim_trace, layout=:sim_layout, @iif("single_sim_completed == true")),
                                                 plot(:rec_trace, layout=:rec_layout, @iif("single_sim_completed == true")),

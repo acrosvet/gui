@@ -1,24 +1,0 @@
-  Activating project at `~/gui`
-
-
- ██████╗ ███████╗███╗   ██╗██╗███████╗    ███████╗
-██╔════╝ ██╔════╝████╗  ██║██║██╔════╝    ██╔════╝
-██║  ███╗█████╗  ██╔██╗ ██║██║█████╗      ███████╗
-██║   ██║██╔══╝  ██║╚██╗██║██║██╔══╝      ╚════██║
-╚██████╔╝███████╗██║ ╚████║██║███████╗    ███████║
- ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═╝╚══════╝    ╚══════╝
-
-| Website  https://genieframework.com
-| GitHub   https://github.com/genieframework
-| Docs     https://learn.genieframework.com
-| Discord  https://discord.com/invite/9zyZbD6J7H
-| Twitter  https://twitter.com/essenciary
-
-Active env: DEV
-
-[0K[0K[0K[0KLoading initializers[0K[0K[0K[0KLoading initializers ✅[0K[0K[0K[0KLoading helpers[0K[0K[0K[0KLoading helpers ✅[0K[0K[0K[0KLoading libs[0K[0K[0K[0KLoading libs ✅[0K[0K[0K[0KLoading resources[0K[0K[0K[0KLoading resources ✅[0K[0K[0K[0KLoading plugins[0K[0K[0K[0KLoading plugins ✅[0K[0K[0K[0KLoading routes[0K[0K[0K[0KLoading routes ✅[0K[0K[0K[0KLoading app[ Info: 2024-04-19 11:15:51 Watching ["/home/acrosbie/gui"]
-[0K[0K[0K[0KLoading app ✅[0K[0K
-Ready! 
-
-┌ Info: 2024-04-19 11:16:13 
-└ Web Server starting at http://127.0.0.1:8000 - press Ctrl/Cmd+C to stop the server. 

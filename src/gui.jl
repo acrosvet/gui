@@ -1,8 +1,8 @@
 module gui
 
 using Pkg, CSV, DataFrames, Dates, Distributions, Genie, GenieFramework, GraphPlot, Graphs, JLD2, LatinHypercubeSampling, LightGraphs, Logging, Parameters, PlotlyBase, Random, SparseArrays, StatsBase
-include("../app.jl")
-include("../ui.jl")
+#include("../app.jl")
+#include("../ui.jl")
 
 Base.@ccallable function julia_main()::Cint
     try
