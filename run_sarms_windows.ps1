@@ -8,14 +8,21 @@ $env:GENIE_ENV = "prod"
 $libsPath = Join-Path (Get-Location) "installed_libs.so"
 if (-Not (Test-Path $libsPath)) {
     # Ask the user if they want to run the installer
-    $response = Read-Host "Do you want to install SARMS?  (allow ~10 minutes)."
+    $response = Read-Host "Do you want to install SARMS? (allow ~10 minutes)."
     if ($response -eq 'Y') {
         Write-Host "Installing SARMS dependencies..."
         $installArgs = "-i", "--threads=$num_cores", ".\install_sarms.jl"
-        Start-Process -FilePath "julia" -ArgumentList $installArgs -NoNewWindow -Wait
-        Write-Host "Installation complete."
+        $process = Start-Process -FilePath "julia" -ArgumentList $installArgs -NoNewWindow -Wait -PassThru
+        if ($process.ExitCode -eq 0) {
+            Write-Host "Installation complete. Please restart the script."
+            exit 0
+        } else {
+            Write-Host "Installation failed."
+            exit 1
+        }
     }
 }
+
 
 Write-Host "Starting SARMS..."
 

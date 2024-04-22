@@ -7,13 +7,12 @@ export GENIE_ENV="prod"
 # Check for the presence of installed_libs.so
 libsPath="./installed_libs.so"
 if [ ! -f "$libsPath" ]; then
-    # Ask the user if they want to run the installer
     read -p "Do you want to install SARMS? (allow ~10 minutes). (Y/n) " response
     if [[ "$response" =~ ^[Yy]$ ]]; then
         echo "Installing SARMS dependencies..."
-        julia -i --threads=$num_cores ./install_sarms.jl
-        if [ $? -eq 0 ]; then
-            echo "Installation complete."
+        if julia -i --threads=$num_cores ./install_sarms.jl; then
+            echo "Installation complete. Please restart SARMS."
+            exit 0
         else
             echo "Installation failed."
             exit 1
