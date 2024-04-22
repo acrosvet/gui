@@ -999,10 +999,10 @@ include("make_farm_network.jl")
                             
                 ))
         
-                layout = PlotlyBase.layout(title="Dynamic network (post simulation)")
+              #  layout = PlotlyBase.layout(title="Dynamic network (post simulation)")
 
 
-        plot =  [edge_trace, node_trace, layout]
+        plot =  [edge_trace, node_trace]
                     
             return plot
 
@@ -1104,9 +1104,9 @@ include("make_farm_network.jl")
                             
                 ))
         
-        layout = PlotlyBase.layout(title="Static network (pre simulation)")
+        #layout = PlotlyBase.layout(title="Static network (pre simulation)")
 
-        plot =  [edge_trace, node_trace, layout]
+        plot =  [edge_trace, node_trace]
                     
             return plot
     end
