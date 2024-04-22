@@ -8,7 +8,7 @@ $env:GENIE_ENV = "prod"
 $libsPath = Join-Path (Get-Location) "installed_libs.so"
 if (-Not (Test-Path $libsPath)) {
     # Ask the user if they want to run the installer
-    $response = Read-Host "Do you want to install SARMS? This is not essential but will reduce subsequent load times (allow ~10 minutes)."
+    $response = Read-Host "Do you want to install SARMS?  (allow ~10 minutes)."
     if ($response -eq 'Y') {
         Write-Host "Installing SARMS dependencies..."
         $installArgs = "-i", "--threads=$num_cores", ".\install_sarms.jl"
