@@ -6,7 +6,9 @@
 4. You will be prompted to 'install' SARMS. This will precompile the required Julia packages and decrease subsequent load times, which is helpful but not required.
 5. The application will launch in a browser window.
 6. The model is resource intensive and will take time to execute.
-7. Running an instance of the between-herd simulation ideally requires > 20gb of RAM, but results can be generated for a cached set of results bundled with the application.
+7. Running an instance of the between-herd simulation ideally requires > 20gb of RAM, but results can be generated for a cached simulation bundled with the application.
 8. The intent of the web application is to explore the functionality of the model. Large scale simulation ensembles should be run directly in Julia, ideally using an HPC.
 
 **You will need to have xcode installed on MacOS. 
+
+Tested in Fedora 39, Ubuntu 22.04 LTS, Mac OS 13 (Ventura), Windows 11.
