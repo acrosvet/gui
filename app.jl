@@ -678,7 +678,7 @@ include("make_farm_network.jl")
             try
                 while !istaskdone(task_to_monitor)
                     elapsed_time = Base.time() - start_time
-                    ensemblestatus = string("Ensemble simulation, time elapsed: ", round(elapsed_time; digits=2), " sec")
+                    ensemblestatus = string("Running ensemble simulation, time elapsed: ", round(elapsed_time; digits=2), " sec")
                     sleep(1)
                 end
             finally
@@ -690,7 +690,8 @@ include("make_farm_network.jl")
 
         ensemble_task = Threads.@spawn results = exec_ensemble(lhs_data)
         ensemble_timer(ensemble_task)
-        results = fetch(ensemble_task)
+        wait(ensemble_task)
+        fetch(ensemble_task)
 
         @info "Arrived here"
 

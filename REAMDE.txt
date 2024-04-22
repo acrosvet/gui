@@ -2,7 +2,7 @@
 
 1. Install Julia on your system following the instructions on the Julia website (https://julialang.org/) for your operating system. 
 2. If you are using Linux, install following the instructions on the website, *not* from your distro's package manager.
-3. Once Julia is installed, double click the shortcut to SARMS for your operating system. You will need to change the shortcut path if you relocate this file.
+3. Once Julia is installed, double click the shortcut to SARMS (if using Windows) or right click and select 'Run as program' if in Linux. In Windows, you will need to change the shortcut path if you relocate this file. In Linux/MacOS, you can also run the shell script directly from a terminal.
 4. You will be prompted to 'install' SARMS. This will precompile the required Julia packages and decrease subsequent load times, which is helpful but not required.
 5. The application will launch in a browser window.
 6. The model is resource intensive and will take time to execute.
