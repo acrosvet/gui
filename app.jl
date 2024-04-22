@@ -690,7 +690,7 @@ include("make_farm_network.jl")
 
         ensemble_task = Threads.@spawn results = exec_ensemble(lhs_data)
         ensemble_timer(ensemble_task)
-        wait(ensemble_task)
+        #wait(ensemble_task)
         fetch(ensemble_task)
 
         @info "Arrived here"

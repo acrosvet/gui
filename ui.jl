@@ -4,7 +4,7 @@ StippleUI.layout(view="hHh Lpr lff",
 """
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
-  document.title = "SARMS-PDH"; // Sets the title
+  document.title = "SARMS-PDH v0.1.1"; // Sets the title
 
   var link = document.querySelector("link[rel~='icon']"); // Finds an existing favicon
   if (!link) {

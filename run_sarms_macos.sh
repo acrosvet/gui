@@ -22,8 +22,6 @@ if [ ! -f "$libsPath" ]; then
 fi
 
 echo "Starting SARMS..."
-
-# Run Julia with the script from the current directory
 julia -i --threads=$num_cores ./run_sarms.jl > sarms_initialiser.log 2>&1 &
 julia_pid=$!
 
